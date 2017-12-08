@@ -2,32 +2,52 @@ import React, { Component } from 'react';
 
 
 /*
-  The list component will take the list of items passed in as a property
-  and create an HTML list with those item. In this example, we are passing in the 
-  filtered produce list, but this component can be used for other types of items 
-  as long as it has a name.
+  The innerList component will take an item of a list of items and render each element separately as an li element and then embed it in a ul tag.
 */
 class InnerList extends Component {
   
 
-    renderImage() {
-    return <li key = {this.props.listItem.image}><img src ={this.props.listItem.image}></img></li>
+  renderImage() {
+    return <li key = {this.props.listItem.image} className = "fixed"><img src ={this.props.listItem.image}></img></li>
        
-    }
-    renderTitle() {
-    return <li key = {this.props.listItem.name} className = 'notPicture'>{this.props.listItem.name}</li>
-    }
-   renderBoxOffice() {
-   return <li key = {this.props.listItem.box_office} className ='notPicture'>{this.props.listItem.box_office}</li>
+  }
+  renderTitle() {
+    return <li key = {this.props.listItem.title} className = 'notPicture'>{this.props.listItem.title}</li>
+  }
+  renderBoxOffice() {
+    return <li key = {this.props.listItem.boxoffice} className ='notPicture'>{this.props.listItem.boxoffice}</li>
+
+  }
+  renderDomesticBoxOffice() {
+    return <li key = {this.props.listItem.domestic_boxoffice} className ='notPicture'>{this.props.listItem.domestic_boxoffice}</li>
+
+  }
+  renderInternationalBoxOffice() {
+   return <li key = {this.props.listItem.international_boxoffice} className ='notPicture'>{this.props.listItem.international_boxoffice}</li>
 
    }
-   renderReleaseYear() {
-   return <li key = {this.props.listItem.release_year} className = 'notPicture'>{this.props.listItem.release_year}</li>;
+  renderMetaCritic() {
+   return <li key = {this.props.listItem.metacritic} className ='notPicture'>{this.props.listItem.metacritic}</li>
+
+   }
+   renderRT() {
+   return <li key = {this.props.listItem.rt} className ='notPicture'>{this.props.listItem.rt}</li>
+
+   }
+   renderRTAvg() {
+   return <li key = {this.props.listItem.rtaverage} className ='notPicture'>{this.props.listItem.rtaverage}</li>
+
+   }
+   renderReleaseDate() {
+   return <li key = {this.props.listItem.releasedate} className = 'notPicture'>{this.props.listItem.releasedate}</li>;
+   }
+   renderDirector() {
+   return <li key = {this.props.listItem.director} className = 'notPicture'>{this.props.listItem.director}</li>;
    }
 
     render() {
         return (
-              <ul className = "movie">{this.renderImage()}{this.renderTitle()}{this.renderBoxOffice()}{this.renderReleaseYear()}</ul>
+              <ul className = "movie">{this.renderImage()}{this.renderTitle()}{this.renderReleaseDate()}{this.renderDirector()}{this.renderBoxOffice()}{this.renderDomesticBoxOffice()}{this.renderInternationalBoxOffice()}{this.renderRT()}{this.renderRTAvg()}{this.renderMetaCritic()}</ul>
         );
     }
 }

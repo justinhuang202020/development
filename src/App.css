@@ -29,58 +29,74 @@
 ul {
   list-style-type: none;
 }
+/*keeps each movie li element equally separated*/
 .movie li {
     display:inline-flex;
-    width: 25%;
+    width: 10%;
 
 }
+.fixed {
+  /*position: fixed;*/
+}
+/*keeps app from resizing*/
 .App {
   width: 100%;
   height: 100%;
-  min-width: 1000px;
-  max-width: 1000px;
+  min-width: 2000px;
+  max-width: 2000px;
 }
+/*draws perimeter of outer list on the right hand side and left hand side*/
 #list{
    border-right-style: solid;
-   border-left-style: solid;
 
 }
+.filter{
+  display: inline-block;
+  /*float: right;*/
+}
+/*//creates top line of the entire list*/
 .header {
   border-top-style: solid;
 }
-
+/*//creates perimeter lines on the left hand side and the bottom */
 .movie{
   border-left-style: solid;
   border-bottom-style: solid;
 }
+/*makes sure each list element not a picture is lined up in the middle*/
 .notPicture {
   vertical-align: 500%;
 }
+/*creates pointer icon when hovering over box office header*/
 a{
   cursor: pointer;
 
 }
+/*sets width and height for image*/
 img {
    height: auto; 
     width: auto; 
     max-width: 200px; 
     max-height: 200px;
 }
+/*creates arrow*/
 i {
     border: solid black;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
 }
+/*up arrow*/
 .up {
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
 }
-
+/*down arrow*/
 .down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 }
+/*arrow inclosed in p tag*/
 p{
   display: inline;
   margin-left: 10px;
